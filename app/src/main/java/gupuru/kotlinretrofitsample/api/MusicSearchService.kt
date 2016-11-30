@@ -18,7 +18,7 @@ fun client(): MusicSearchService {
 
     val builder = Retrofit.Builder()
             .client(okHttpClient)
-            .baseUrl("https://api.spotify.com")
+            .baseUrl(gupuru.kotlinretrofitsample.BuildConfig.SPOTIFY_BASE_URL)
             .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create(createGson()))
             .build()
